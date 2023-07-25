@@ -6,7 +6,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   palette:
-    primary: deep purple
+    primary: custom
   features:
     - content.code.copy
     - content.tabs.link

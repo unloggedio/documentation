@@ -14,7 +14,7 @@
     <dependency>
       <artifactId>unlogged-sdk</artifactId>
       <groupId>video.bug</groupId>
-      <version>0.0.12</version>
+      <version>0.0.14</version>
     </dependency>
     ```
 
@@ -22,8 +22,8 @@
     ``` groovy
     dependencies
     {
-        implementation 'video.bug:unlogged-sdk:0.0.12'
-        annotationProcessor 'video.bug:unlogged-sdk:0.0.12'
+        implementation 'video.bug:unlogged-sdk:0.0.14'
+        annotationProcessor 'video.bug:unlogged-sdk:0.0.14'
     }
     ```
 
@@ -39,14 +39,14 @@ Here is an example.
     }
 ```
 
-### Clean, Compile and Run!
+### Clean, and Run!
 
 === "maven"
     ``` maven
-    mvn clean package
+    mvn clean
     ```
 
 === "gradle"
     ``` groovy
-    gradle clean build
+    gradle clean
     ```

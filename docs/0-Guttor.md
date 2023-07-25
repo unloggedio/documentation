@@ -9,22 +9,23 @@ The below chart explains what these guttor icons mean and what you are expected 
 
     This icon means that your application is not running with Unlogged. You can add the Unlogged dependency in your pom.xml or build.gradle, mvn clean package or gradle clean build and start debugging your application.
  
-#### Application Running with Unlogged
+!!! process "Application Running with Unlogged"
 
-Once you see this icon, it means that your application is running with Unlogged. Now, you can invoke any method inside your Java code using Direct Invoke or call http end points using Postman, Swagger or UI.
+    Once you see this icon, it means that your application is running with Unlogged. Now, you can invoke any method inside your Java code using Direct Invoke or call http end points using Postman, Swagger or UI.
 
-#### Recording Available for methods
+!!! recording "Recording Available for methods"
 
-Once you execute a method, using either Direct Invoke, Postman, or Swagger, you will see this icon. It indicates that the method has the recorded data in the form of input and return values. 
+    Once you execute a method, using either Direct Invoke, Postman, or Swagger, you will see this icon. It indicates that the method has the recorded data in the form of input and return values. 
 
-#### Execute Method
+!!! bolt "Execute Method"
 
-If you make code changes after a recording is done for a method, you will see a bolt icon. That means you can now hot-relaod the method and replay its previously recorded inputs.
+    If you make code changes after a recording is done for a method, you will see a bolt icon. That means you can now hot-relaod the method and replay its previously recorded inputs.
 
-#### Passing Case
+!!! nodifference "Passing Case"
+    
+    After your code changes, and once you execute the method, this icon tells you if the return value is same as before. 
 
-After your code changes, and once you execute the method, this icon tells you if the return value is same as before. 
 
-#### Failing Case
+!!! difference "Failing Case"
 
-After your code changes, and once you execute the method, this icon tells you if the return value is different from before. 
+    After your code changes, and once you execute the method, this icon tells you if the return value is different from before. 

@@ -16,7 +16,7 @@ Check [Getting Started](/) section to know how to add the dependency.
 
 Use Postman, Swagger in case you are accessing these methods through http end points. You can even use your UI to send data to your application. 
 
-You can use ```Direct Invoke``` inside the plugin to call any Java method directly. This will save you a lot of time in debugging deep within your code. You can start debugging your functions right where it matters.
+You can use ```Direct Invoke``` inside the plugin to call any Java method directly. This will save you a lot of time in debugging deep within your code. You can start debugging your methods right where it matters.
 
 !!! recording "Recording Available for methods"
 

@@ -1,5 +1,6 @@
 ---
 site_name: Documentation
+site_url: https://unloggedio.github.io/documentation/
 copyright: Copyright &copy; 2021 - 2023 Unlogged, Inc.
 repo_url: https://github.com/unloggedio/unlogged-sdk   
 theme:

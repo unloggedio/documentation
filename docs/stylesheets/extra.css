@@ -2,7 +2,22 @@
   --md-primary-fg-color:        #171923;
   --md-primary-fg-color--light: #171923;
   --md-primary-fg-color--dark:  #171923;
-
   --md-accent-fg-color: #FE64D8;
   --md-accent-bg-color: #FE64D8;
+  --md-admonition-icon--noprocess: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20.8394 22.7305L17.2794 19.1705L12.5694 21.8205C12.4094 21.9405 12.2094 22.0005 11.9994 22.0005C11.7894 22.0005 11.5894 21.9405 11.4294 21.8205L3.52938 17.3805C3.36905 17.2962 3.23489 17.1696 3.14145 17.0145C3.04801 16.8594 2.99887 16.6816 2.99937 16.5005V7.50047C2.99937 7.12047 3.20938 6.79047 3.52938 6.62047L4.29938 6.19047L1.10938 3.00047L2.38938 1.73047L22.1094 21.4605L20.8394 22.7305ZM11.9994 4.15047L17.9594 7.50047L13.3094 10.1105L20.5294 17.3305C20.8194 17.1605 20.9994 16.8505 20.9994 16.5005V7.50047C20.9994 7.12047 20.7894 6.79047 20.4694 6.62047L12.5694 2.18047C12.4094 2.06047 12.2094 2.00047 11.9994 2.00047C11.7894 2.00047 11.5894 2.06047 11.4294 2.18047L7.55937 4.36047L8.99937 5.82047L11.9994 4.15047Z" fill="currentColor"/></svg>')
+}
+
+.md-typeset .admonition.noprocess,
+.md-typeset details.noprocess {
+  border-color: rgb(229, 62, 62);
+}
+.md-typeset .noprocess > .admonition-title,
+.md-typeset .noprocess > summary {
+  background-color: rgba(229, 62, 62, 0.1);
+}
+.md-typeset .noprocess > .admonition-title::before,
+.md-typeset .noprocess > summary::before {
+  background-color: rgb(229, 62, 62);
+  -webkit-mask-image: var(--md-admonition-icon--noprocess);
+          mask-image: var(--md-admonition-icon--noprocess);
 }

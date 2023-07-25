@@ -5,10 +5,10 @@ For every method in your code base, you will see different guttor icons.
 The below chart explains what these guttor icons mean and what you are expected to do.
 
 
-#### Application Not Running with Unlogged
+!!! noprocess "Application Not Running with Unlogged"
 
-This icon means that your application is not running with Unlogged. You can add the Unlogged dependency in your pom.xml or build.gradle, mvn clean package or gradle clean build and start debugging your application.
-
+    This icon means that your application is not running with Unlogged. You can add the Unlogged dependency in your pom.xml or build.gradle, mvn clean package or gradle clean build and start debugging your application.
+ 
 #### Application Running with Unlogged
 
 Once you see this icon, it means that your application is running with Unlogged. Now, you can invoke any method inside your Java code using Direct Invoke or call http end points using Postman, Swagger or UI.

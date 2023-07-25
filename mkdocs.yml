@@ -1,6 +1,7 @@
 ---
 site_name: Documentation
 copyright: Copyright &copy; 2021 - 2023 Unlogged, Inc.
+repo_url: https://github.com/unloggedio/unlogged-sdk
 theme:
   name: material
   logo: assets/logo.svg
@@ -42,3 +43,12 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons

@@ -8,7 +8,7 @@ Here are different gutter icons and what they mean
 
     This icon means that your application is not running with Unlogged. You can add the Unlogged dependency in your pom.xml or build.gradle, mvn clean or gradle clean and start debugging your application.
  
-Check [Getting Started](/) section to know how to add the dependency.
+Check [Getting Started](index.md) section to know how to add the dependency.
 
 !!! process "Application Running with Unlogged"
 

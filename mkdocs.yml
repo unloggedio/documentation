@@ -1,16 +1,35 @@
 ---
-site_name: Unlogged Documentation
+site_name: Documentation
+copyright: Copyright &copy; 2021 - 2023 Unlogged, Inc.
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/images/favicon.png
   font:
-    text: Roboto
+    text: Inter
     code: Roboto Mono
   palette:
     primary: custom
+    accent: custom
   features:
     - content.code.copy
     - content.tabs.link
     - content.code.select
+    - navigation.footer
+extra:
+  analytics:
+    provider: google
+    property: G-D6V9GV8D5Q
+  social:
+    - icon: fontawesome/brands/discord 
+      link: https://discord.gg/Hhwvay8uTa
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/company/videobug/?viewAsMember=true
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/UnloggedI
+    - icon: fontawesome/brands/github
+      link: https://github.com/unloggedio/unlogged-sdk
+  generator: false
 extra_css:
     - stylesheets/extra.css
 markdown_extensions:

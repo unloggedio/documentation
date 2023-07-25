@@ -5,6 +5,8 @@
 * IntelliJ IDEA --> Preferences --> Plugins --> Marketplace
 * Search for Unlogged in the marketplace & Install
 
+![Image title](/assets/images/1.png)
+
 ### Adding the dependency
 
 === "maven"

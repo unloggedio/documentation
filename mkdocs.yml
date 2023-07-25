@@ -2,6 +2,8 @@
 site_name: Unlogged Documentation
 theme:
   name: material
+  extra_css:
+    - stylesheets/extra.css
   font:
     text: Roboto
     code: Roboto Mono

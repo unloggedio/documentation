@@ -22,19 +22,26 @@ You can use ```Direct Invoke``` inside the plugin to call any Java method direct
 
     Once you execute a method, using either Direct Invoke, Postman, or Swagger, you will see this icon. It indicates that Unlogged has recorded input and return values for the method. 
 
-Here is how you can check the recorded data
+Click on the icon and you can check the recorded data
 
-
+![](assets/images/3.png)
 
 !!! bolt "Execute Method"
 
     If you make code changes after a recording is done for a method, you will see a bolt icon. That means you can now hot-relaod the code changes within this method and replay its previously recorded inputs.
 
+Note the code changes in getWeatherinfo in the above vs below code snippet.
+
+![](assets/images/4.png)
+
 !!! nodifference "Passing Case"
     
     After your code changes, and once you execute the method, this icon tells you if the return value is same as before. 
 
+![](assets/images/6.png)
 
 !!! difference "Failing Case"
 
     After your code changes, and once you execute the method, this icon tells you if the return value is different from before. 
+
+![](assets/images/5.png)

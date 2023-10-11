@@ -1,4 +1,4 @@
-# Saving Replays
+# Saving Candidates
 
 ## What's a Candidate? 
 

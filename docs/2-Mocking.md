@@ -6,7 +6,7 @@ With one click, Unlogged lets you mock API, DB, downstream service calls and fil
 
 Click on the ghost icons, and see the recorded data, and click save.
 
-## Mocking on the Go!
+## Mock as you write!
 
 When you write a line of code, we automatically detect if the logic in the line can be mocked. 
 

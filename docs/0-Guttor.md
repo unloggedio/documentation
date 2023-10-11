@@ -1,6 +1,6 @@
-# Guttor Icons & What they mean
+# Guttor Icon States
 
-Once you install Unlogged, for each method in your code base, you will see different guttor icons. The code, record, replay lifecycle revolves around these 7 gutter icons. 
+Once you install Unlogged, for each method in your code base, you will see different guttor icons. The code, record, replay lifecycle revolves around these 6 gutter icons. 
 
 Here are different gutter icons and what they mean
 

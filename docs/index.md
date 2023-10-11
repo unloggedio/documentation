@@ -14,7 +14,7 @@
     <dependency>
       <artifactId>unlogged-sdk</artifactId>
       <groupId>video.bug</groupId>
-      <version>0.0.14</version>
+      <version>0.1.12</version>
     </dependency>
     ```
 
@@ -22,8 +22,8 @@
     ``` groovy
     dependencies
     {
-        implementation 'video.bug:unlogged-sdk:0.0.14'
-        annotationProcessor 'video.bug:unlogged-sdk:0.0.14'
+        implementation 'video.bug:unlogged-sdk:0.1.12'
+        annotationProcessor 'video.bug:unlogged-sdk:0.1.12'
     }
     ```
 
@@ -39,7 +39,7 @@ Here is an example.
     }
 ```
 
-### Clean, and Run!
+### Clean, and Debug!
 
 === "maven"
     ``` maven
@@ -50,3 +50,12 @@ Here is an example.
     ``` groovy
     gradle clean
     ```
+
+Start your application in debug mode to call any java function directly.
+
+Here is a sample method ```samplemethod()``` you can call using ```Direct Invoke```
+
+
+
+!!! warning
+    Do not call your ```main``` method using ```Direct Invoke```

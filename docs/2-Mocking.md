@@ -1,7 +1,13 @@
 # Mocking
 
-This feature is coming soon!
+With one click, Unlogged lets you mock API, DB, downstream service calls and file operations.
 
-Unlogged will automatically mock external API calls, DB calls or downstream service calls, so that you can test your code changes in isolation.
+## Using Recorded Data
 
-You will be able to turn mocking on and off so that you can test your code changes in integrated fashion.
+Click on the ghost icons, and see the recorded data, and click save.
+
+## Mocking on the Go!
+
+When you write a line of code, we automatically detect if the logic in the line can be mocked. 
+
+You can click on the icon and define the mock, manually.

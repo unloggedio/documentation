@@ -11,17 +11,23 @@ Each unique combination of input and return value is called a Candidate.
 
 But return value may contain ever changing or irrelevant fields such as timestamp. That's where Assertions come in picture.
 
-## Defining Assertions
+## Creating Assertions
 
 When you click on **Save Replay** - you will see a window that presents the recorded value of the object for the candidate we just replayed.  
 
-You can define any assertion on this return value, down to any key/value pair.
+![](assets/images/assertion.gif)
+
+## Defining Assertions
+
+You can define any assertion on this return value, down to any key/value pair. You can define nested assertions with ```AND``` ```OR``` ```NOT``` on different key-value pairs and group them together. 
 
 ## Saving the Replays
 
 Replays with assertions are saved at the below location
 
-```/YOUR PROJECT DIRECTORY/src/test/resources/unlogged```
+```/YOUR MODULE DIRECTORY/src/test/resources/unlogged```
+
+![](assets/images/savelocation.png)
 
 !!! nodifference "Replaying with Assertions"
     For your code change, when you replay the candidate, Unlogged will execute the assertion you just saved and inform if the candidate passes or fails the assertions.

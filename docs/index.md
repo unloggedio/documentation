@@ -14,7 +14,7 @@
     <dependency>
       <artifactId>unlogged-sdk</artifactId>
       <groupId>video.bug</groupId>
-      <version>0.1.12</version>
+      <version>0.1.14</version>
     </dependency>
     ```
 
@@ -22,8 +22,8 @@
     ``` groovy
     dependencies
     {
-        implementation 'video.bug:unlogged-sdk:0.1.12'
-        annotationProcessor 'video.bug:unlogged-sdk:0.1.12'
+        implementation 'video.bug:unlogged-sdk:0.1.14'
+        annotationProcessor 'video.bug:unlogged-sdk:0.1.14'
     }
     ```
 

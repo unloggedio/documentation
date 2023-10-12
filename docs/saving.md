@@ -13,7 +13,7 @@ But return value may contain ever changing or irrelevant fields such as timestam
 
 ## Creating Assertions
 
-When you click on **Save Replay** - you will see a window that presents the recorded value of the object for the candidate we just replayed.  
+When you click on :material-content-save:{ .heart }**Save Replay** - you will see a window that presents the recorded value of the object for the candidate we just replayed.  
 
 ![](assets/images/assertion.gif)
 

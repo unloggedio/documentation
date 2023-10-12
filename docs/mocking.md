@@ -1,6 +1,8 @@
 # Mocking
 
-With one click, Unlogged lets you mock API, DB, downstream service calls and file operations.
+With one click, Unlogged lets you mock :material-api:{ .heart }API, :material-database:{ .heart }DB, :material-arrow-down:{ .heart }downstream service calls 
+
+and :file_folder:{ .heart }file operations.
 
 ## Using Recorded Data
 

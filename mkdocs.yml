@@ -2,7 +2,16 @@
 site_name: Documentation
 site_url: https://unloggedio.github.io/documentation/
 copyright: Copyright &copy; 2021 - 2023 Unlogged, Inc.
-repo_url: https://github.com/unloggedio/unlogged-sdk   
+repo_url: https://github.com/unloggedio/unlogged-sdk
+nav:
+  - Getting Started: index.md
+  - Call Java Methods Directly: directinvoke.md
+  - Saving Candidates: saving.md
+  - Gutter Icon States: gutter.md
+  - Mocking: mocking.md
+  - Code Coverage: coverage.md
+  - Common Errors: commonerrors.md
+  - How does it all work?: curiosity.md    
 theme:
   name: material
   logo: assets/logo.svg

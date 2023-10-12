@@ -119,3 +119,9 @@
   -webkit-mask-image: var(--md-admonition-icon--difference);
           mask-image: var(--md-admonition-icon--difference);
 }
+
+.md-typeset a {
+    color: #fe64d8;
+    word-break: break-word;
+}
+

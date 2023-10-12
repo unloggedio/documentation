@@ -21,10 +21,41 @@ When you click on **Save Replay** - you will see a window that presents the reco
 
 You can define any assertion on this return value, down to any key/value pair. You can define nested assertions with ```AND``` ```OR``` ```NOT``` on different key-value pairs and **group them together**. 
 
+### List of Operators
+
+You can see the following operators available in the dropdown.
+
+- [x] is
+- [x] size is
+- [x] length is
+- [x] equals ignore case
+- [x] is not
+- [x] size is not
+- [x] length is not
+- [x] is false
+- [x] matches regex
+- [x] not matches regex
+- [x] is true
+- [x] <
+- [x] <=
+- [x] >
+- [x] >=
+- [x] is not null
+- [x] is null
+- [x] is empty
+- [x] is not empty
+- [x] contains key in object
+- [x] contains item in array
+- [x] not contains item in array
+- [x] contains substring
+- [x] not contains key in object
+- [x] not contains substring
+
 ![](assets/images/defineassertion.gif)
 
 !!! tip
-    If you see the color code changing from green to red, it's a failing assertion. 
+    Green background color means passing assertion and red means failing assertion. 
+
 
 
 ## Saving the Replays

@@ -27,6 +27,8 @@
     }
     ```
 
+Sync your project once so that the Unlogged dependency is downloaded from maven repository.
+
 ### Adding the annotion
 To start recording method input and return values - add ```@Unlogged``` annoation just above your main method.
 

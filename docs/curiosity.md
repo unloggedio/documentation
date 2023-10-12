@@ -8,6 +8,8 @@
 
 We have extended lombok's implementation to add such probes automatically. 
 
+Check our [blog post](https://www.unlogged.io/post/how-does-the-lombok-magic-work-underneath) that explains how lombok works 
+
 ## Unlogged Plugin
 
 ### Direct Invoke

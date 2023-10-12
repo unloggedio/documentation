@@ -25,3 +25,4 @@ If you want to test only your application using APIs or UI, you can enable the p
 
 This is helpful while testing your method outside of ```Direct Invoke```, using Postman, or Swagger or your application UI.
 
+![](assets/images/permocking.gif)

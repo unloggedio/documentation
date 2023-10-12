@@ -23,7 +23,7 @@ You can define any assertion on this return value, down to any key/value pair. Y
 
 ### List of Operators
 
-Here are the operators, what they do and how it is evaluated on a data type.
+Here are the operators, what they do and how it is evaluated on a data type. Also, how a passing and a failing case looks like.
 
 | Operator               | Description for Assertions                   |:octicons-check-circle-24:{ .heart } Passing Case                |:fontawesome-solid-face-grin-tongue-squint:{ .heart } Failing Case               |
 |------------------------|----------------------------------------------|---------------------------------|---------------------------------|

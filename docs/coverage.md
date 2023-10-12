@@ -8,7 +8,7 @@ Unlogged highlights the lines of code executed and offers you the feedback on co
 
 The code coverage won't increase unless you save the candidates with assertions. 
 
-Note the **potential uptick in the coverage** number on the replay window.
+Note the **potential uptick :material-arrow-up-thick:{ .heart } in the coverage** number on the replay window.
 
 
 ## Tracking 

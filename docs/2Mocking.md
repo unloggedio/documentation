@@ -13,3 +13,8 @@ When you write a line of code, we automatically detect if the logic in the line 
 You can click on the icon and define the mock, manually.
 
 ## Permanent Mocks
+
+If you want to test only your application using APIs or UI, you can enable the permanent mocks. With this check, even when your method is accessed using an API call, the permanently mocked line will be mocked.
+
+This is helpful while testing your method outside of ```Direct Invoke```, using Postman, or Swagger or your application UI.
+

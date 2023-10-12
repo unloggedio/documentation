@@ -1,6 +1,6 @@
 # Call Java Methods Directly
 
-To test a ```java``` method, you either have to write a unit test, or expose an http end point and then ```F8```/step over till you reach your method. A few folks often use ```System.out.print``` to debug. 
+To test a ```java``` method, you either have to write a unit test, or expose an http end point and then ```F8```/step over :material-debug-step-over:{ .heart } till you reach your method. A few folks often use ```System.out.print``` to debug. 
 
 We connect a lot with this meme from [monkeyuser](https://www.monkeyuser.com/2017/step-by-step-debugging/)
 

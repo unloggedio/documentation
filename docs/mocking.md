@@ -9,7 +9,7 @@ and :file_folder:{ .heart }file operations.
 Unlogged automatically identifies the lines of code that can be mocked. 
 
 
-![](assets/images/ghost.svg){ .heart } A ghost icon will appear next to the identified lines. 
+:simple-ghostery:{ .heart } A ghost icon will appear next to the identified lines. 
 
 Click on the ghost icon, and define the ```when``` condition and the corresponding```then``` return value, and click save. This will change the code in runtime and replace this line of code with the mock you just defined.
 

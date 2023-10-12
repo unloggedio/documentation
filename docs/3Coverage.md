@@ -10,7 +10,7 @@ The code coverage won't increase unless you save the candidates with assertions.
 
 You can check the progress in the tab ```Code Coverage``` every time you save different candidates.
 
-Track class coverage, method coverage, and line coverage in this tab.
+Track class coverage, method coverage and line coverage in this tab.
 
 !!! tip
 	The code coverage is shown even when you use external tools such as Postman, or Swagger to execute a method through an http end point.

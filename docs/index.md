@@ -54,10 +54,3 @@ Here is an example.
     ```
 
 Start your application in debug mode to call any java function directly.
-
-Here is a sample method ```samplemethod()``` you can call using ```Direct Invoke```
-
-
-
-!!! warning
-    Do not call your ```main``` method using ```Direct Invoke```

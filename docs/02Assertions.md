@@ -19,7 +19,7 @@ When you click on **Save Replay** - you will see a window that presents the reco
 
 ## Defining Assertions
 
-You can define any assertion on this return value, down to any key/value pair. You can define nested assertions with ```AND``` ```OR``` ```NOT``` on different key-value pairs and group them together. 
+You can define any assertion on this return value, down to any key/value pair. You can define nested assertions with ```AND``` ```OR``` ```NOT``` on different key-value pairs and **group them together**. 
 
 ![](assets/images/defineassertion.gif)
 

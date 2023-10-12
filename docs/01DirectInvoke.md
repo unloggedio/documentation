@@ -11,3 +11,6 @@ We connect a lot with this meme from [monkeyuser](https://www.monkeyuser.com/201
 With ```Direct Invoke``` you can call a Java method directly. Once you start your application in debug mode, you will see the cyan colored icon next to any method. Click on it and Unlogged pre-fills it with dummy arguments. Execute the method and you will get the return value just for the method you called.
 
 ![](assets/images/di.gif)
+
+!!! warning
+    DO NOT call your ```main``` method using ```Direct Invoke``` It will fail since it attempts to start the process again using Unlogged with the same ports.

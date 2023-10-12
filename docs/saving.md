@@ -23,40 +23,41 @@ You can define any assertion on this return value, down to any key/value pair. Y
 
 ### List of Operators
 
-You can see the following operators available in the dropdown.
+Here are the operators, what they do and how it is evaluated on a data type.
 
-- [x] is
-- [x] size is
-- [x] length is
-- [x] equals ignore case
-- [x] is not
-- [x] size is not
-- [x] length is not
-- [x] is false
-- [x] matches regex
-- [x] not matches regex
-- [x] is true
-- [x] <
-- [x] <=
-- [x] >
-- [x] >=
-- [x] is not null
-- [x] is null
-- [x] is empty
-- [x] is not empty
-- [x] contains key in object
-- [x] contains item in array
-- [x] not contains item in array
-- [x] contains substring
-- [x] not contains key in object
-- [x] not contains substring
+| Operator               | Description for Assertions                   | Internal Evaluation                                           |
+|------------------------|----------------------------------------------|---------------------------------------------------|
+| is                     | Asserts that a value is as expected.        | `assertThat(value).is(expected);`                 |
+| size is                | Asserts the size of a collection or array.  | `assertThat(list).sizeIs(10);`                    |
+| length is              | Asserts the length of a string.            | `assertThat(string).lengthIs(5);`                |
+| equals ignore case    | Asserts string equality, ignoring case.    | `assertThat(str1).equalsIgnoreCase(str2);`        |
+| is not                 | Asserts that a value is not as expected.    | `assertThat(value).isNot(unexpected);`           |
+| size is not            | Asserts the size is not a specific value.   | `assertThat(list).sizeIsNot(5);`                  |
+| length is not          | Asserts the length is not a specific value. | `assertThat(string).lengthIsNot(7);`             |
+| is false              | Asserts that a boolean value is false.     | `assertThat(booleanValue).isFalse();`            |
+| matches regex         | Asserts that a string matches a regex.      | `assertThat(str).matchesRegex("regexPattern");`  |
+| not matches regex     | Asserts that a string doesn't match regex. | `assertThat(str).doesNotMatchRegex("regexPattern");` |
+| is true               | Asserts that a boolean value is true.      | `assertThat(booleanValue).isTrue();`             |
+| <                      | Asserts that a value is less than expected. | `assertThat(number).isLessThan(10);`             |
+| <=                     | Asserts that a value is less or equal.     | `assertThat(number).isLessOrEqualTo(5);`         |
+| >                      | Asserts that a value is greater than expected. | `assertThat(number).isGreaterThan(20);`      |
+| >=                     | Asserts that a value is greater or equal.  | `assertThat(number).isGreaterOrEqualTo(15);`     |
+| is not null           | Asserts that a value is not null.          | `assertThat(value).isNotNull();`                 |
+| is null               | Asserts that a value is null.              | `assertThat(value).isNull();`                    |
+| is empty              | Asserts that a value is empty.             | `assertThat(value).isEmpty();`                   |
+| is not empty          | Asserts that a value is not empty.         | `assertThat(value).isNotEmpty();`                |
+| contains key in object | Asserts the presence of a key in an object. | `assertThat(map).containsKey("key");`           |
+| contains item in array | Asserts the presence of an item in an array. | `assertThat(array).containsItem(item);`       |
+| not contains item in array | Asserts the absence of an item in an array. | `assertThat(array).doesNotContainItem(item);` |
+| contains substring     | Asserts the presence of a substring in a string. | `assertThat(string).containsSubstring("substring");` |
+| not contains key in object | Asserts the absence of a key in an object. | `assertThat(map).doesNotContainKey("key");`    |
+| not contains substring | Asserts the absence of a substring in a string. | `assertThat(string).doesNotContainSubstring("substring");` |
+
 
 ![](assets/images/defineassertion.gif)
 
 !!! tip
-    Green background color means passing assertion and red means failing assertion. 
-
-
+    Green background color means a passing assertion and red means a failing assertion. 
 
 ## Saving the Replays
 

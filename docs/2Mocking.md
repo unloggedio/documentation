@@ -4,7 +4,14 @@ With one click, Unlogged lets you mock API, DB, downstream service calls and fil
 
 ## Using Recorded Data
 
+Unlogged automatically identifies the lines of code that can be mocked. 
+
+
+![](assets/images/ghost.svg) A ghost icon will appear next to the identified lines. 
+
 Click on the ghost icon, and define the ```when``` condition and the corresponding```then``` return value, and click save. This will change the code in runtime and replace this line of code with the mock you just defined.
+
+![](assets/images/mocking.gif)
 
 ## Mock as you write!
 

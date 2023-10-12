@@ -12,5 +12,11 @@ With ```Direct Invoke``` you can call a Java method directly. Once you start you
 
 ![](assets/images/di.gif)
 
+## Debug where it matters
+
+Start debugging where it matters. Put a breakpoint anywhere in the method and execute a method using ```Direct Invoke```. Check IntelliJ's debugger and values of all variables.
+
+No need to expose an http end point or write a unit test to debug something deep within your code.
+
 !!! warning
     DO NOT call your ```main``` method using ```Direct Invoke``` It will fail since it attempts to start the process again using Unlogged with the same ports.

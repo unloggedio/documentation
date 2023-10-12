@@ -45,3 +45,7 @@ Note the code changes in getWeatherinfo in the above vs below code snippet.
     After your code changes, and once you execute the method, this icon tells you if the return value is different from before. 
 
 ![](assets/images/5.png)
+
+Here is a cheat sheet that explains these gutter states in short.
+
+![](assets/images/gutterstate.png)

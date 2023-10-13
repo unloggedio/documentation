@@ -56,3 +56,6 @@ Here is an example.
     ```
 
 Start your application in debug mode to call any java function directly.
+
+!!!danger "DO NOT deploy Unlogged in production!"
+    Unlogged adds probes in your code and causes significant performance degradation. We are working on a **production-deployable** version and will keep our documentation updated accordingly.

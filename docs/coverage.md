@@ -1,8 +1,6 @@
 # Code Coverage
 
-Getting code coverage number above 90% is often challenging and takes a lot of time and effort. 
-
-Unlogged highlights the lines of code executed and offers you the feedback on code coverage. 
+Getting code coverage number above 90% is often challenging and takes a lot of time and effort. Unlogged offers instant feedback on code coverage by highlighting the lines of code executed. 
 
 ![](assets/images/coverage1.gif)
 

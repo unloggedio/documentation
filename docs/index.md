@@ -1,5 +1,7 @@
 # Getting Started
 
+Install Unlogged, record and replay ```java``` methods, track code coverage, mock external and downstream calls, and create perfectly working Junit tests. 
+
 ### Installing the Plugin
 
 * IntelliJ IDEA --> Preferences --> Plugins --> Marketplace

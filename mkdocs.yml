@@ -44,9 +44,6 @@ extra:
   generator: false
 extra_css:
     - stylesheets/extra.css
-plugins:
-  - search
-  - meta-descriptions
 markdown_extensions:
   - tables
   - def_list

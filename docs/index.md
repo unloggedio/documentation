@@ -32,7 +32,7 @@ Install Unlogged, record and replay ```java``` methods, track code coverage, moc
 Sync your project once so that the Unlogged dependency is downloaded from maven repository.
 
 ### Adding the annotation
-To start recording method input and return values - add ```@Unlogged``` annoation just above your main method.
+To start recording method input and return values - add ```@Unlogged``` annotation just above your main method.
 
 Here is an example.
 

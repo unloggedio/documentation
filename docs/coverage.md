@@ -1,6 +1,6 @@
 # Code Coverage
 
-Getting code coverage number above 90% is often challenging and takes a lot of time and effort. Unlogged offers instant feedback on code coverage by highlighting the lines of code executed. 
+Getting code coverage number above 90% is often challenging and takes a lot of time and effort. Unlogged offers instant feedback on code coverage by highlighting :material-lightbulb-on:{ .heart } the lines of code executed. 
 
 ![](assets/images/coverage1.gif)
 

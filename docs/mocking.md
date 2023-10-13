@@ -28,3 +28,6 @@ If you want to test only your application using APIs or UI, you can enable the p
 This is helpful while testing your method outside of ```Direct Invoke```, using Postman, or Swagger or your application UI.
 
 ![](assets/images/permocking.gif)
+
+!!! failure "Static or Same Class methods"
+	Note that the static methods or methods within the same class **can't be mocked**. You will **NOT** see the ghost :simple-ghostery:{ .heart } icon in such cases.

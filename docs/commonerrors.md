@@ -2,22 +2,46 @@
 
 ## Errors with Direct Invoke
 
---Explain shortly how Direct invoke works--
 
---List down all the errors related to direct invoke.
+DirectInvoke communicates with your application using a custom RPC implementation inside the unlogged-sdk. The RPC is active when there is a @Unlogged annotation on the class executed.
+
+The RPC includes these details:
+
+- Class name
+- Method name
+- Method signature
+- Parameter types
+- Paramter values
+- Mock definitions
+
+The command executor in unlogged-sdk gets an instance of `ClassName`. It gets the instance in one of the two ways
+
+1. Last seen instance of type ClassName
+2. Try to create a new one if no existing instance exists (using the no-args constructor)
 
 
-## Errors with Logging 
+## Errors with in DirectInvoke
 
-[unlogged-sdk](https://github.com/unloggedio/unlogged-sdk) logs code execution and [unlogged-plugin](https://plugins.jetbrains.com/plugin/18529-unlogged) scans these logs and creates test candidates. 
+### Object Serialization and Deserialization
 
-!!! failure "Failed to serialize response object"
-	There are a few fields we can't serialize. You will see the error: 
-	```Failed to serialize response object of type``` This means that the object, Pojo or an extended object can not be serialized. 
-
-Here is a list of Pojos/Objects that can't be serialized:
+!!! failure "Object serialization/deserialization"
+	If jackson is unable to serialize any parameter or return value then it shows up as its long id hash code.
+	This can affect you while using DirectInvoke or Generate JUnit Test Case.
 
 
+### java.lang.NullPointerException
+
+1. Value of a field is null
+
+Frequently in scenarios where DirectInvoke is used on non-service classes such that no recently used instance is available, the instance created using the default no-args constructor will leave the fields uninitialized. Support for args based constructor is coming soon.
+
+2. A local variable based on input parameter is null
+
+Make sure the parameter values you are passing are correct and the associated data exists if downstream calls are not mocked.
 
 
+
+### Cannot invoke "java.lang.reflect.Field.getType()" because "field" is null
+
+This means that one of the parameter required to execute the method could not be created. It could be due to different reasons.
 

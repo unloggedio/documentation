@@ -45,3 +45,11 @@ Make sure the parameter values you are passing are correct and the associated da
 
 This means that one of the parameter required to execute the method could not be created. It could be due to different reasons.
 
+### Authentication is empty
+
+When the method being executed expects an Object in the SecurityContextHolder, it will receive null and throw an NPE if it tries to invoke a method on the expected return object. Support for this will come in future version.
+
+### No transaction found
+
+When using @Transacational annotation on methods, currently the code using transactions will fail since no transaction is created when method are executed. Support for this will come in future version.
+

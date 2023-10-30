@@ -15,11 +15,11 @@ The RPC includes:
 
 The command executor in unlogged-sdk gets an instance of `ClassName`. It gets the instance in one of the two ways
 
-- Last seen instance of type ClassName
-- Try to create a new one if no existing instance exists 
+- If available, use the last known instance of type ClassName
+- If not, create a new one. 
 
 !!!	tip 
-	In case the command executor tries to create a new instance, it uses the no-arg constructor.
+	In case the command executor creates a new instance, it uses the no-arg constructor.
 
 
 ## What can go wrong?

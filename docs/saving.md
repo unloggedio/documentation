@@ -1,8 +1,8 @@
-# Saving Candidates
+# Saving Replays
 
-Click on the replay tab and you will see a list of inputs. These are candidates. For all subsequent code changes, you can replay these candidates. 
+Click on the replay tab and you will see a list of inputs. Each replay is a candidate. For all subsequent code changes, you can replay these candidates. 
 
-## What's a Candidate? 
+## Candidate! What's that? 
 
 When you execute a method using ```Direct Invoke``` or through an http endpoint, you will see the method input values that can be replayed. 
 

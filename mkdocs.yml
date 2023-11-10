@@ -6,10 +6,11 @@ repo_url: https://github.com/unloggedio/unlogged-sdk
 nav:
   - Getting Started: index.md
   - Call Java Methods Directly: directinvoke.md
-  - Saving Candidates: saving.md
+  - Saving Replays: saving.md
   - Gutter Icon States: gutter.md
   - Mocking: mocking.md
   - Code Coverage: coverage.md
+  - Running Replays in CI: cirunner.md
   - Common Errors: commonerrors.md
 theme:
   name: material

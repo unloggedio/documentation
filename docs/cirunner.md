@@ -80,3 +80,8 @@ public class UnloggedRunnerTest {
 	Remember to update ```<spring.application.package.name>``` to your package name, ```config/application-dev.yml``` to the config files you want to use. ```UnloggedRunnerTest.YamlPropertySourceFactory.class``` is for supporting yml files. Specify your test application properties inside ```ApplicationProperties.class```.
 
 With this, unlogged test runner will create as instance of the spring application context and execute the tests based on the beans created by spring.
+
+### Reports
+
+Running ```mvn test``` or ```gradle test``` will generate ```xml``` reports that are stored at ```${basedir}/target/surefire-reports```
+

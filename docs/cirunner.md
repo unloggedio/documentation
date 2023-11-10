@@ -44,3 +44,5 @@ public class UnloggedTest {
 
 !!! tip
 	Yep! This class has no methods since the replay tests will be based on ```src/test/resources/unlogged/<ClassName>.json``` files.
+
+Execute ```mvn test``` or ```gradle test``` to execute the tests from CLI.

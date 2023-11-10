@@ -46,3 +46,37 @@ public class UnloggedTest {
 	Yep! This class has no methods since the replay tests will be based on ```src/test/resources/unlogged/<ClassName>.json``` files.
 
 Execute ```mvn test``` or ```gradle test``` to execute the tests from CLI.
+
+### Integration testing on Springboot application
+
+For Springboot applications, customize the above tests as follows:
+
+```java
+@RunWith(UnloggedTestRunner.class)
+@ComponentScan("<spring.application.package.name>")
+@EnableAutoConfiguration
+@PropertySource(
+value = {"config/application.yml", "config/application-dev.yml"},
+factory = UnloggedRunnerTest.YamlPropertySourceFactory.class) 
+@EnableConfigurationProperties({ApplicationProperties.class})
+@TestConfiguration
+public class UnloggedRunnerTest {
+
+	public static class YamlPropertySourceFactory implements PropertySourceFactory {
+        public YamlPropertySourceFactory() {
+        }
+
+    @Override
+    public PropertiesPropertySource createPropertySource(String name, EncodedResource encodedResource) throws IOException {
+            YamlPropertiesFactoryBean factory = new YamlPropertiesFactoryBean();
+            factory.setResources(encodedResource.getResource());
+            return new PropertiesPropertySource(encodedResource.getResource().getFilename(), factory.getObject());
+       }
+    }
+}
+```
+
+!!! example "Remember!"
+	Remember to update ```<spring.application.package.name>``` to your package name, ```config/application-dev.yml``` to the config files you want to use. ```UnloggedRunnerTest.YamlPropertySourceFactory.class``` is for supporting yml files. Specify your test application properties inside ```ApplicationProperties.class```.
+
+With this, unlogged test runner will create as instance of the spring application context and execute the tests based on the beans created by spring.

@@ -7,6 +7,11 @@ While running the replay tests locally is important during development for rapid
 === "maven"
     ``` xml
     <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
       <artifactId>unlogged-sdk</artifactId>
       <groupId>video.bug</groupId>
       <version>0.1.18</version>
@@ -17,6 +22,8 @@ While running the replay tests locally is important during development for rapid
     ``` groovy
     dependencies
     {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:{version}'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:{version}'
         implementation 'video.bug:unlogged-sdk:0.1.18'
         annotationProcessor 'video.bug:unlogged-sdk:0.1.18'
     }
@@ -27,9 +34,9 @@ While running the replay tests locally is important during development for rapid
 - mock all the dependency calls inside your methods 
 - bind them with the replays. 
 
-unlogged-sdk test runner uses the JUnit Platform test runner to run replays created using the plugin. To execute unlogged tests as ```mvn test``` or ```gradle test``` or ```intellij run test```.
+The `unlogged-sdk` test runner uses the JUnit Platform test runner to run replays created using the plugin.
 
-Start by creating the following test class file ```UnloggedTest.java``` in your src/test/java directory
+Start by creating the following test class file `UnloggedTest.java` in your `src/test/java` directory
 
 ```java
 	
@@ -43,9 +50,9 @@ public class UnloggedTest {
 ```
 
 !!! tip
-	Yep! This class has no methods since the replay tests will be based on ```src/test/resources/unlogged/<ClassName>.json``` files.
+	Yep! This class has no methods since the replay tests will be based on `src/test/resources/unlogged/<ClassName>.json` files.
 
-Execute ```mvn test``` or ```gradle test``` to execute the tests from CLI.
+Execute `mvn test` or `gradle test` or `intellij run test`  to run the tests from CLI.
 
 ### Integration testing on Springboot application
 
@@ -77,11 +84,11 @@ public class UnloggedRunnerTest {
 ```
 
 !!! example "Remember!"
-	Remember to update ```<spring.application.package.name>``` to your package name, ```config/application-dev.yml``` to the config files you want to use. ```UnloggedRunnerTest.YamlPropertySourceFactory.class``` is for supporting yml files. Specify your test application properties inside ```ApplicationProperties.class```.
+	Remember to update `<spring.application.package.name>` to your package name, `config/application-dev.yml` to the config files you want to use. `UnloggedRunnerTest.YamlPropertySourceFactory.class` is for supporting yml files. Specify your test application properties inside `ApplicationProperties.class`.
 
 With this, unlogged test runner will create as instance of the spring application context and execute the tests based on the beans created by spring.
 
 ### Reports
 
-Running ```mvn test``` or ```gradle test``` will generate ```xml``` reports that are stored at ```${basedir}/target/surefire-reports```
+Running `mvn test` or `gradle test` will generate `xml` reports that are stored at `${basedir}/target/surefire-reports`
 

@@ -59,3 +59,31 @@ Start your application in debug mode to call any java function directly.
 
 !!!danger "DO NOT deploy Unlogged in production!"
     Unlogged adds probes in your code and causes significant performance degradation. We are working on a **production-deployable** version and will keep our documentation updated accordingly.
+
+### Disabling Unlogged
+
+You can disable unlogged either in compile or runtime.
+
+#### Compile Time
+
+=== "maven"
+    ``` maven
+    mvn package -Dunlogged.disable
+    ```
+
+=== "gradle"
+    ``` groovy
+    ./gradlew build -Dunlogged.disable
+    ```
+
+#### Run Time
+
+Update the ```annotation``` on top of your main method.
+
+``` Java
+@Unlogged(enable = false)
+```
+
+!!!tip "Remember" 
+
+    Note that when you disable the annotation in runtime, the logging probes are still added to your code. But they won't log anything, since the ```enable``` flag is set to ```false```

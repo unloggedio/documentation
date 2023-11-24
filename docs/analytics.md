@@ -4,56 +4,54 @@ Unlogged tracks a few things from the plugin. This is important for us to improv
 
 Here are a few things we track.
 
-### Your computer hostname
+## **Quick Navigation**
+- [Computer Hostname](#computer-hostname)
+- [SDK Connection](#sdk-connection)
+- [Method Invocation](#method-invocation)
+- [SDK Responses](#sdk-responses)
+- [Test Case Generation](#test-case-generation)
+- [Replay Features](#replay-features)
+- [Mock Management](#mock-management)
+- [Replay Status Insights](#replay-status-insights)
+- [Privacy Assurance](#privacy-assurance)
 
-We track the hostname to get an approximate count of users and where each of those users may be stuck.
 
-### SDK connected
+### **Computer Hostname**
+- **What We Track:** Your computer's hostname.
+- **Why It Matters:** This helps us gauge the user count and identify where users might encounter issues.
 
-When you start the application with ```unlogged-sdk``` we track an event, so that we know the user has progressed to the next step from installation.
+### **SDK Connection**
+- **Event Logging:** Initiation of the application with Unlogged SDK.
+- **Purpose:** To confirm your successful progression from installation to application startup.
 
-### DIRECT Invoke
+### **Method Invocation**
+- **Focus:** Name of the method invoked.
+- **Note:** Rest assured, we **do not track** the method's input variables or its return values.
 
-We track the name of the method invoked. 
+### **SDK Responses**
+- **Two Key Events:**
+  1. **SDK Response (Normal):** Logged when methods return the expected object smoothly.
+  2. **SDK Response (Exception):** Tracked if a method fails or returns an exception.
 
-!!! tip "Important" 
-    We DO NOT track the variables fed to this method or the response returned by the method.
+### **Test Case Generation**
+- **Tracking Instance:** Generation of unit tests using recorded data.
+- **Impact:** Enables us to refine this feature for your ease of use.
 
-#### SDK Response Normal
+### **Replay Features**
+- **Key Actions Tracked:**
+  1. **Candidate Replay:** When you replay a candidate, it's noted.
+  2. **Replay Saving:** Saving replays in JSON format is also tracked.
+  - **Privacy Note:** We **do not monitor** assertion rules, variable names in these rules, or the assertion JSON.
 
-We track this event in case the method successfully returned the necessary object, without any error.
+### **Mock Management**
+- **What We Observe:** Injection, activation, or deactivation of mocks.
+- **Privacy Assurance:** Details like mock maps or specific lines for mock operations are not tracked.
 
-#### SDK Response Exception
+### **Replay Status Insights**
+- **Insight Gathering:** Whether a replay candidate passes or fails.
+- **Privacy Commitment:** No tracking of variable names, code blocks, or config files.
 
-We track this event to know in case the method didn't return the necessary object or returned an exception.
-
-### Unit Test Generated
-
-We track this event, when a user generates unit test using the recorded data.
-
-### Candidate Replayed
-
-When a user replays a candidate, we track the button click.
-
-### Replay Saved
-
-When a user saves the replay in the form of a json, we track the event. 
-
-!!! tip "Important" 
-    We DO NOT track assertion rules, or variable names within the assertion rules or the assertion ```json``` itself.
-
-### Mocks Injected
-
-When a user injects mocks, enables or disables them, we track the event. 
-
-!!! tip "Important" 
-    We DO NOT track the mock maps or the lines for which mocks have been enabled/disabled.
-
-### Replay Status
-
-We track if the replay candidate is passing or failing. 
-
-!!! tip "Important"
-    In any case, we DON'T track your variable names, code blocks, or config files. None of these are uploaded over the internet. 
-
-The plugin can work fully offline and none of these event tracking block the user.
+### **Privacy Assurance**
+- **Offline Functionality:** Operates entirely offline.
+- **Non-Intrusive:** No event tracking hinders your workflow.
+- **Data Integrity:** Your code and configurations stay private.

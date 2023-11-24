@@ -12,6 +12,7 @@ nav:
   - Code Coverage: coverage.md
   - Running Replays in CI: cirunner.md
   - Common Errors: commonerrors.md
+  - Analytics: analytics.md
 theme:
   name: material
   logo: assets/logo.svg

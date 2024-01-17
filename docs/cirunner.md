@@ -60,8 +60,8 @@ For Springboot applications, customize the above tests as follows:
 @PropertySource(
 value = {"config/application.yml", "config/application-dev.yml"},
 factory = UnloggedRunnerTest.YamlPropertySourceFactory.class) 
-@EnableConfigurationProperties({ApplicationProperties.class})
-@TestConfiguration
+@TestPropertySource({"classpath:application.properties"})
+@WebAppConfiguration
 public class UnloggedRunnerTest {
 
 	public static class YamlPropertySourceFactory implements PropertySourceFactory {
@@ -80,6 +80,8 @@ public class UnloggedRunnerTest {
 
 !!! example "Remember!"
 	Remember to update ```<spring.application.package.name>``` to your package name, ```config/application-dev.yml``` to the config files you want to use. ```UnloggedRunnerTest.YamlPropertySourceFactory.class``` is for supporting yml files. Specify your test application properties inside ```ApplicationProperties.class```.
+
+`WebAppConfiguration` annotation is needed if there are any methods in starting class of the project that configure services, that cannot be enabled for integration tests. For example some configuration for Swagger or API monitoring. If these configurations are in a seperate file, then the annotation is not needed.
 
 With this, unlogged test runner will create as instance of the spring application context and execute the tests based on the beans created by spring.
 

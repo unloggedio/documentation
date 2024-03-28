@@ -16,7 +16,7 @@ Install Unlogged, record and replay ```java``` methods, track code coverage, moc
     <dependency>
       <artifactId>unlogged-sdk</artifactId>
       <groupId>video.bug</groupId>
-      <version>0.1.30</version>
+      <version>0.2.16</version>
     </dependency>
     ```
 

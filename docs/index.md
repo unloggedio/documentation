@@ -24,8 +24,8 @@ Install Unlogged, record and replay ```java``` methods, track code coverage, moc
     ``` groovy
     dependencies
     {
-        implementation 'video.bug:unlogged-sdk:0.1.30'
-        annotationProcessor 'video.bug:unlogged-sdk:0.1.30'
+        implementation 'video.bug:unlogged-sdk:0.2.16'
+        annotationProcessor 'video.bug:unlogged-sdk:0.2.16'
     }
     ```
 

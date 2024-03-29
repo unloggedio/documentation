@@ -9,7 +9,7 @@ While running the replay tests locally is important during development for rapid
     <dependency>
       <artifactId>unlogged-sdk</artifactId>
       <groupId>video.bug</groupId>
-      <version>0.1.18</version>
+      <version>0.2.16</version>
     </dependency>
     ```
 
@@ -17,8 +17,8 @@ While running the replay tests locally is important during development for rapid
     ``` groovy
     dependencies
     {
-        implementation 'video.bug:unlogged-sdk:0.1.18'
-        annotationProcessor 'video.bug:unlogged-sdk:0.1.18'
+        implementation 'video.bug:unlogged-sdk:0.2.16'
+        annotationProcessor 'video.bug:unlogged-sdk:0.2.16'
     }
     ```
 

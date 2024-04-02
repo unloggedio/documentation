@@ -1,33 +1,28 @@
 # Mocking
 
+Traditionally, developers set up wiremock to mock APIs, and test containers to mock downstream services or database/redis calls. 
+
 With one click, Unlogged lets you mock :material-api:{ .heart }API, :material-database:{ .heart }DB, :material-arrow-down:{ .heart }downstream service calls 
 
-and :file_folder:{ .heart }file operations.
+and :file_folder:{ .heart }file operations, in runtime. 
 
-## Using Recorded Data
+## Recorded Mocks
 
 Unlogged automatically identifies the lines of code that can be mocked. 
 
 
 :simple-ghostery:{ .heart } A ghost icon will appear next to the identified lines. 
 
-Click on the ghost icon, and define the ```when``` condition and the corresponding```then``` return value, and click save. This will change the code in runtime and replace this line of code with the mock you just defined.
+Use postman/swagger or Direct Invoke and the unlogged will show you the mocks with recorded ```when``` and ```then``` values. 
 
-![](assets/images/mocking.gif)
+![](assets/images/mockingfinal.gif)
 
-## Mock as you write!
+## What happens underneath when you mock?
 
-When you write a line of code, we automatically detect if the logic in the line can be mocked. 
+The plugin informs the sdk to replace the line of code with its mocks. In rutime, the mocks get executed instead of actual code. 
 
-You can click on the icon and define the mock, manually.
-
-## Permanent Mocks
-
-If you want to test only your application using APIs or UI, you can enable the permanent mocks. With this check, even when your method is accessed using an API call, the permanently mocked line will be mocked.
-
-This is helpful while testing your method outside of ```Direct Invoke```, using Postman, or Swagger or your application UI.
-
-![](assets/images/permocking.gif)
+!!! tip
+	The mock gets executed when you call the method either from Postman/Swagger or Direct Invoke. 
 
 !!! failure "Static or Same Class methods"
 	Note that the static methods or methods within the same class **can't be mocked**. You will **NOT** see the ghost :simple-ghostery:{ .heart } icon in such cases.

@@ -5,14 +5,11 @@ copyright: Copyright &copy; 2021 - 2023 Unlogged, Inc.
 repo_url: https://github.com/unloggedio/unlogged-sdk
 nav:
   - Getting Started: index.md
-  - Call Java Methods Directly: directinvoke.md
-  - Saving Replays: saving.md
-  - Gutter Icon States: gutter.md
-  - Mocking: mocking.md
-  - Code Coverage: coverage.md
-  - Running Replays in CI: cirunner.md
-  - Common Errors: commonerrors.md
-  - Analytics: analytics.md
+  - Live View: liveview.md
+  - Replays: replays.md
+  - Saving and running Replays: saveandrun.md
+  - Runtime Mocking: mocking.md
+  - What do we track?: analytics.md
 theme:
   name: material
   logo: assets/logo.svg

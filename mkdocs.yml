@@ -9,6 +9,7 @@ nav:
   - Replays: replays.md
   - Saving and running Replays: saveandrun.md
   - Runtime Mocking: mocking.md
+  - Generating JUnit Tests: junit.md
   - What do we track?: analytics.md
 theme:
   name: material

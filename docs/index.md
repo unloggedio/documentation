@@ -1,6 +1,6 @@
 # Getting Started
 
-Welcome to Unlogged, the secret weapon designed specifically for Java developers seeking to consistently produce reliable and high-performing code.
+Welcome to Unlogged, the secret weapon designed specifically for Java devs seeking to consistently produce reliable and high-performing code.
 
 With Unlogged-SDK integrated into your Java applications, you gain unparalleled insights into your application's runtime behavior and unlock a plethora of new capabilities.
 
@@ -40,7 +40,7 @@ Watch how to create and manage replay tests:
 
 ### Automated Test Generation
 
-[Test Generation](https://read.unlogged.io/saveandrun/)
+[Test Generation](https://read.unlogged.io/junit/)
 
 Automate test script generation with JUnit, utilizing replay tests or generating boilerplate code to kickstart your testing efforts. Seamlessly integrate with Mockito for efficient test dependency management.
 

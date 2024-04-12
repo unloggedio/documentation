@@ -7,7 +7,6 @@ Ever wished you could peer into the heart of your application as it runs, watchi
 !!! tip
     This isn't just any feature. It's your front-row ticket to the inner workings of your code, filled with great insights into your code.
 
-### Key Features
 
 Every single execution of a method is called a ```Replay``` and with each ```Replay``` you will see the following:
 

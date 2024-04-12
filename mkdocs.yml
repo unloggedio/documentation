@@ -5,11 +5,12 @@ copyright: Copyright &copy; 2021 - 2023 Unlogged, Inc.
 repo_url: https://github.com/unloggedio/unlogged-sdk
 nav:
   - Getting Started: index.md
+  - Plugin/SDK setup: setup.md
   - Live View: liveview.md
-  - Replays: replays.md
-  - Saving and running Replays: saveandrun.md
+  - Direct Invoke: direct_invoke_java_method.md
+  - Replay Testing: java_replay_testing.md
   - Runtime Mocking: mocking.md
-  - Generating JUnit Tests: junit.md
+  - Generating JUnit Tests: generate_automated_junit.md
   - What do we track?: analytics.md
 theme:
   name: material

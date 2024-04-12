@@ -1,15 +1,3 @@
-# How do I see replays?
-You can either call your APIs using Postman, Swagger or UI. 
-
-Or you can call Java method directly.
-
-You will start seeing ```replays``` almost immediately, in your live view.
-
-![](assets/images/loadingreplays.gif)
-
-!!! tip 
-    Unlogged records authentication and other request headers when you call APIs, and injects them later for the method replays as needed.
-
 # Call Java Methods Directly
 
 To test a ```java``` method, traditionally, you either have to write a unit test, or expose an http end point and then ```F8```/step over :material-debug-step-over:{ .heart } till you reach your method. A few folks often use ```System.out.print``` to debug. 

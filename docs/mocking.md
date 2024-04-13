@@ -17,6 +17,10 @@ Use postman/swagger or Direct Invoke and the unlogged will show you the mocks wi
 
 ![](assets/images/mockingfinal.gif)
 
+## Choices of Mock Execution
+
+Unlogged provides developers with a versatile mocking feature that allows for three distinct behaviors when handling method returns within tests. You can set a mock to execute its normal behavior, return a null value, or throw a designated exception. This flexibility supports various testing scenarios, enabling developers to thoroughly test software behavior under different conditions.
+
 ## What happens underneath when you mock?
 
 The plugin informs the sdk to replace the line of code with its mocks. In rutime, the mocks get executed instead of actual code. 

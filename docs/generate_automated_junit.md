@@ -12,6 +12,10 @@ Unlogged.io tracks the execution of your code as it runs. This tracking captures
 !!! tip Utilizing Boilerplate Generation
     If generating JUnit tests post-execution does not align with your workflow, or if you prefer to set up tests in advance, Unlogged.io offers a boilerplate generation option. This feature allows you to create template-based tests before running your actual code. 
 
+Here is how you can create boilerplate for your JUnit tests. 
+
+![](assets/images/junitboilerplate.gif)
+
 
 The `canDeliverToCustomer` method below determines if a delivery can be made to a customer based on their location and weather conditions:
 

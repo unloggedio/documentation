@@ -10,12 +10,15 @@
 
 ### Adding the dependency
 
+  <a href="https://mvnrepository.com/artifact/video.bug/unlogged-sdk"><img src="https://img.shields.io/maven-central/v/video.bug/unlogged-sdk?style=for-the-badge" /></a>
+
+
 === "maven"
     ``` xml
     <dependency>
       <artifactId>unlogged-sdk</artifactId>
       <groupId>video.bug</groupId>
-      <version>0.3.9</version>
+      <version>LATEST</version>
     </dependency>
     ```
 
@@ -23,8 +26,8 @@
     ``` groovy
     dependencies
     {
-        implementation 'video.bug:unlogged-sdk:0.3.9'
-        annotationProcessor 'video.bug:unlogged-sdk:0.3.9'
+        implementation 'video.bug:unlogged-sdk:LATEST'
+        annotationProcessor 'video.bug:unlogged-sdk:LATEST'
     }
     ```
 

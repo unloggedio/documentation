@@ -18,7 +18,7 @@ docker run -dp 8123:8123
 public.ecr.aws/z6h2b9v3/unlogged_server:latest
 ```
 
-#### Docker-compose Deployment
+### Docker-compose Deployment
 - The server can be deployed using docker compose. An example docker-compose file is as follows:
 
 ```sh

@@ -1,4 +1,4 @@
-# Frequency Logging
+# Selective Logging
 
 The SDK can be configured to define the frequency with which methods should be logged. This improves the performance impact of running user application with SDK significantly. The **default behaviour** is to log all calls to a method.
 
@@ -98,4 +98,4 @@ Some methods are never probed. They have the following names:
 - `onComplete`.
 
 !!! Tip "Deployment Strategy"
-	The frequency logging is a recommended starategy for deploying your application with SDK in production and pre-production environments. There should be a moderate frequency counter process wide. **Stable classes/methods** that are called many times should have extremly high counter values. **Experimental classes/methods** should have a lower counter value to log a wider range of traffic.
+	The selective logging is a recommended starategy for deploying your application with SDK in production and pre-production environments. There should be a moderate frequency counter process wide. **Stable classes/methods** that are called many times should have extremly high counter values. **Experimental classes/methods** should have a lower counter value to log a wider range of traffic.

@@ -26,6 +26,8 @@ Replays and mockd with assertions are saved at the below location
 
 While running the replay tests locally is important during development for rapid feedback, using a CI pipeline :material-sync:{ .heart } enhances the overall development process by automating the testing and validation steps in a controlled and scalable environment. It ensures that the codebase is reliable and meets quality standards before changes are pushed to production.
 
+<a href="https://mvnrepository.com/artifact/video.bug/unlogged-sdk"><img src="https://img.shields.io/maven-central/v/video.bug/unlogged-sdk?style=for-the-badge" /></a>
+
 ### Adding the dependency
 
 === "maven"
@@ -33,7 +35,7 @@ While running the replay tests locally is important during development for rapid
     <dependency>
       <artifactId>unlogged-sdk</artifactId>
       <groupId>video.bug</groupId>
-      <version>0.3.9</version>
+      <version>LATEST</version>
     </dependency>
     ```
 
@@ -41,8 +43,8 @@ While running the replay tests locally is important during development for rapid
     ``` groovy
     dependencies
     {
-        implementation 'video.bug:unlogged-sdk:0.3.9'
-        annotationProcessor 'video.bug:unlogged-sdk:0.3.9'
+        implementation 'video.bug:unlogged-sdk:LATEST'
+        annotationProcessor 'video.bug:unlogged-sdk:LATEST'
     }
     ```
 
@@ -71,6 +73,31 @@ and then run this simple command.
 === "gradle"
     ``` groovy
     ./gradlew test
+    ```
+
+For Replay cases to be picked up from CLI you will need to add the following extra dependencies.
+=== "maven"
+    ``` xml
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <version>1.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    ```
+
+=== "gradle"
+    ``` groovy
+    dependencies
+    {   
+        testImplementation 'junit:junit:4.12'
+        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.2.0'
+    }
     ```
 
 !!! tip
@@ -112,9 +139,9 @@ public class UnloggedRunnerTest {
 
 With this, unlogged test runner will create as instance of the spring application context and execute the tests based on the beans created by spring.
 
-### Code Coverage Reports for Replays
+### Test and Coverage Reports for Replays
 
-Running ```mvn test``` or ```gradle test``` will generate ```xml``` reports that are stored at ```${basedir}/target/surefire-reports```
-
+Popular Test reports like `surefire` and Coverage reports like `JaCoCo` will pick up Replay cases readily.
+```mvn test``` or ```gradle test``` or any commands to trigger reports will automatically include Replay cases as long as they are executed.
 
 

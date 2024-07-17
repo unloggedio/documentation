@@ -13,8 +13,8 @@ The unlogged server is a self-hosted service, that can be used with plugin and S
 docker volume create unlogged_volume
 
 # run the docker container
-docker run -dp 8123:8123 
--v unlogged_volume:/usr/src/app/local-session 
+docker run -dp 8123:8123 \
+-v unlogged_volume:/usr/src/app/local-session \
 ghcr.io/unloggedio/unlogged_server:latest
 ```
 

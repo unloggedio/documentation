@@ -81,13 +81,11 @@ Some method are always probed. These are:
 
 - methods of an interface
 - methods of a enum
-- methods of a static class
-- static method
 - constructor method
 - starting method of process (the `public static void main() ` method)
 
 ### 2. Never Probed Method
-Some methods are never probed. They have the following names:
+The method with following names are never probed:
 
 - `equals`
 - `hashCode`
@@ -95,7 +93,8 @@ Some methods are never probed. They have the following names:
 - `onSubscribe`
 - `onError`
 - `currentContext`
-- `onComplete`.
+- `onComplete`
+- Also any abstract method is never probed.
 
 !!! Tip "Deployment Strategy"
 	The selective logging is a recommended starategy for deploying your application with SDK in production and pre-production environments. There should be a moderate frequency counter process wide. **Stable classes/methods** that are called many times should have extremly high counter values. **Experimental classes/methods** should have a lower counter value to log a wider range of traffic.

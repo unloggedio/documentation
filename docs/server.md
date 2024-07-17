@@ -15,7 +15,7 @@ docker volume create unlogged_volume
 # run the docker container
 docker run -dp 8123:8123 
 -v unlogged_volume:/usr/src/app/local-session 
-public.ecr.aws/z6h2b9v3/unlogged_server:latest
+ghcr.io/unloggedio/unlogged_server:latest
 ```
 
 ### Docker-compose Deployment
@@ -26,7 +26,7 @@ version: '2'
 
 services:
   unlogged_server:
-    image: public.ecr.aws/z6h2b9v3/unlogged_server:latest
+    image: ghcr.io/unloggedio/unlogged_server:latest
     ports:
       - "8123:8123"
     volumes:
@@ -56,7 +56,7 @@ version: '2'
 
 services:
   unlogged_server:
-	image: public.ecr.aws/z6h2b9v3/unlogged_server:latest
+	image: ghcr.io/unloggedio/unlogged_server:latest
 	ports:
 	  - "8123:8123"
 	environment:
@@ -126,7 +126,7 @@ docker run -dp 8123:8123
 -e cloud.aws.region.static=bucket_region
 -e cloud.aws.credentials.access-key=access_key
 -e cloud.aws.credentials.secret-key=secret_key
-public.ecr.aws/z6h2b9v3/unlogged_server:latest
+ghcr.io/unloggedio/unlogged_server:latest
 ```
 
 #### Docker-compose Deployment
@@ -137,7 +137,7 @@ version: '2'
 
 services:
   unlogged_server:
-    image: public.ecr.aws/z6h2b9v3/unlogged_server:latest
+    image: ghcr.io/unloggedio/unlogged_server:latest
     ports:
       - "8123:8123"
     volumes:
@@ -181,7 +181,6 @@ java -jar -Dspring.profiles.active=minio \
 ## Docker Registries
 The unlogged docker image is available on the following registries:
 
-- Amazon ECR: [`public.ecr.aws/z6h2b9v3/unlogged_server`](https://us-east-1.console.aws.amazon.com/ecr/public-registry/repositories?region=us-east-1)
 - Github GHCR: [`ghcr.io/unloggedio/unlogged_server:latest`](https://github.com/orgs/unloggedio/packages/container/package/unlogged_server)
 
 

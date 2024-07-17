@@ -1,6 +1,6 @@
 # Selective Logging
 
-The SDK can be configured to define the frequency with which methods should be logged. This improves the performance impact of running user application with SDK significantly. The **default behaviour** is to log all calls to a method.
+The SDK can be configured to define the frequency with which methods should be logged. This improves the performance impact of running user application with SDK significantly. The **default behavior** is to log all calls to a method.
 
 ## Logging Series
 When a frequency counter is defined for a method, then that method would be logged at that frequency. For example if a method is configured to be logged at `counter=2`, then it's 1<sup>st</sup>, 3<sup>rd</sup>, 5<sup>th</sup>, 7<sup>th</sup>, 9<sup>th</sup> ... call will be logged. More strictly, if a `counter "c"` is defined for a method then it's <code>(nc+1)<sup>th</sup> call</code> will be logged where n is a whole number.
@@ -12,7 +12,7 @@ When a frequency counter is defined for a method, then that method would be logg
 This configuration can be defined at many levels of the code hierarchy. These are:
 
 ### 1. Process based logging counter
-A blanket counter can be applied to the process, that will apply to all methods until overridden. This can be done as an parameter to the `Unlogged` annotation. The paramater value needs to be a long passed as a string to the processor. An example with counter 10 is defined below.
+A blanket counter can be applied to the process, that will apply to all methods until overridden. This can be done as an parameter to the `Unlogged` annotation. The parameter value needs to be a long passed as a string to the processor. An example with counter 10 is defined below.
 
 ```java
 package org.unlogged.demo.unloggedapplicaton;
@@ -30,7 +30,7 @@ public class Application {
 ```
 
 ### 2. Class based logging counter
-A counter can be applied to the class, that will apply to all it's methods. This can be done as an parameter to the `UnloggedClass` annotation. The paramater value also needs to be a long passed as a string to the processor. An example with counter 10 is defined below.
+A counter can be applied to the class, that will apply to all it's methods. This can be done as an parameter to the `UnloggedClass` annotation. The parameter value also needs to be a long passed as a string to the processor. An example with counter 10 is defined below.
 
 ```java
 package org.unlogged.demo.unloggedapplicaton;
@@ -48,7 +48,7 @@ public class temp {
 ```
 
 ### 3. Method based logging counter
-A counter can be applied to an indivisual method. This can be done as an parameter to the `UnloggedMethod` annotation. The paramater value needs to be a long passed as a string to the processor. An example with counter 10 is defined below.
+A counter can be applied to an individual method. This can be done as an parameter to the `UnloggedMethod` annotation. The parameter value needs to be a long passed as a string to the processor. An example with counter 10 is defined below.
 
 ```java
 package org.unlogged.demo.unloggedapplicaton;
@@ -66,7 +66,7 @@ public class temp {
 ```
 
 ### Priority order of frequency counters
-- A method's logging counter can have conflicting rules. Then they take precendence based on the following order:
+- A method's logging counter can have conflicting rules. Then they take precedence based on the following order:
 ```
 process level < class level < method level
 ```
@@ -81,13 +81,11 @@ Some method are always probed. These are:
 
 - methods of an interface
 - methods of a enum
-- methods of a static class
-- static method
 - constructor method
 - starting method of process (the `public static void main() ` method)
 
 ### 2. Never Probed Method
-Some methods are never probed. They have the following names:
+The method with following names are never probed:
 
 - `equals`
 - `hashCode`
@@ -95,7 +93,8 @@ Some methods are never probed. They have the following names:
 - `onSubscribe`
 - `onError`
 - `currentContext`
-- `onComplete`.
+- `onComplete`
+- Also any abstract method is never probed.
 
 !!! Tip "Deployment Strategy"
-	The selective logging is a recommended starategy for deploying your application with SDK in production and pre-production environments. There should be a moderate frequency counter process wide. **Stable classes/methods** that are called many times should have extremly high counter values. **Experimental classes/methods** should have a lower counter value to log a wider range of traffic.
+	The selective logging is a recommended strategy for deploying your application with SDK in production and pre-production environments. There should be a moderate frequency counter process wide. **Stable classes/methods** that are called many times should have extremely high counter values. **Experimental classes/methods** should have a lower counter value to log a wider range of traffic.

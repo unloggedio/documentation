@@ -1,9 +1,9 @@
 # Unlogged Server
 
-The unlogged server is a self-hosted service, that can be used with plugin and SDK. Deploy the production service with SDK and it will push the logs to unlogged server. Then the intellij IDEA can download the test candidates, and the production traffic can be replayed locally.
+The unlogged server is a self-hosted service, that can be used with plugin and SDK. Deploy the production service with SDK and it will push the logs to unlogged server. Then the IntelliJ IDEA can download the test candidates, and the production traffic can be replayed locally.
 
-## Deployment from local filesystem
-- The server can be deployed without a minio and S3 configuration. All files will be stored in the local filesystem. 
+## Deployment from local file system
+- The server can be deployed without a minio and S3 configuration. All files will be stored in the local file system. 
 
 ### Docker Deployment
 - To deploy the server from docker run the following commands:
@@ -13,9 +13,9 @@ The unlogged server is a self-hosted service, that can be used with plugin and S
 docker volume create unlogged_volume
 
 # run the docker container
-docker run -dp 8123:8123 
--v unlogged_volume:/usr/src/app/local-session 
-public.ecr.aws/z6h2b9v3/unlogged_server:latest
+docker run -dp 8123:8123 \
+-v unlogged_volume:/usr/src/app/local-session \
+ghcr.io/unloggedio/unlogged_server:latest
 ```
 
 ### Docker-compose Deployment
@@ -26,7 +26,7 @@ version: '2'
 
 services:
   unlogged_server:
-    image: public.ecr.aws/z6h2b9v3/unlogged_server:latest
+    image: ghcr.io/unloggedio/unlogged_server:latest
     ports:
       - "8123:8123"
     volumes:
@@ -41,6 +41,7 @@ volumes:
 - Run the container using `docker compose -f path_to_file up -d`
 
 ### Jar Deployment
+- The jar can be downloaded from [here](https://github.com/unloggedio/server/releases).
 - The command to run from JAR is:
 ```bash
 java -jar unlogged_server.jar
@@ -56,7 +57,7 @@ version: '2'
 
 services:
   unlogged_server:
-	image: public.ecr.aws/z6h2b9v3/unlogged_server:latest
+	image: ghcr.io/unloggedio/unlogged_server:latest
 	ports:
 	  - "8123:8123"
 	environment:
@@ -126,7 +127,7 @@ docker run -dp 8123:8123
 -e cloud.aws.region.static=bucket_region
 -e cloud.aws.credentials.access-key=access_key
 -e cloud.aws.credentials.secret-key=secret_key
-public.ecr.aws/z6h2b9v3/unlogged_server:latest
+ghcr.io/unloggedio/unlogged_server:latest
 ```
 
 #### Docker-compose Deployment
@@ -137,7 +138,7 @@ version: '2'
 
 services:
   unlogged_server:
-    image: public.ecr.aws/z6h2b9v3/unlogged_server:latest
+    image: ghcr.io/unloggedio/unlogged_server:latest
     ports:
       - "8123:8123"
     volumes:
@@ -181,7 +182,6 @@ java -jar -Dspring.profiles.active=minio \
 ## Docker Registries
 The unlogged docker image is available on the following registries:
 
-- Amazon ECR: [`public.ecr.aws/z6h2b9v3/unlogged_server`](https://us-east-1.console.aws.amazon.com/ecr/public-registry/repositories?region=us-east-1)
 - Github GHCR: [`ghcr.io/unloggedio/unlogged_server:latest`](https://github.com/orgs/unloggedio/packages/container/package/unlogged_server)
 
 

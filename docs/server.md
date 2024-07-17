@@ -41,6 +41,7 @@ volumes:
 - Run the container using `docker compose -f path_to_file up -d`
 
 ### Jar Deployment
+- The jar can be downloaded from [here](https://github.com/unloggedio/server/releases).
 - The command to run from JAR is:
 ```bash
 java -jar unlogged_server.jar

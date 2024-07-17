@@ -1,9 +1,9 @@
 # Unlogged Server
 
-The unlogged server is a self-hosted service, that can be used with plugin and SDK. Deploy the production service with SDK and it will push the logs to unlogged server. Then the intellij IDEA can download the test candidates, and the production traffic can be replayed locally.
+The unlogged server is a self-hosted service, that can be used with plugin and SDK. Deploy the production service with SDK and it will push the logs to unlogged server. Then the IntelliJ IDEA can download the test candidates, and the production traffic can be replayed locally.
 
-## Deployment from local filesystem
-- The server can be deployed without a minio and S3 configuration. All files will be stored in the local filesystem. 
+## Deployment from local file system
+- The server can be deployed without a minio and S3 configuration. All files will be stored in the local file system. 
 
 ### Docker Deployment
 - To deploy the server from docker run the following commands:

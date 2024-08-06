@@ -10,13 +10,12 @@ Probing of code can happen in multiple modes. This configuration allows the user
 2. Log Annotated Only
 	- This can be configured from main annotation like `@Unlogged(unloggedMode = UnloggedMode.LogAnnotatedOnly)`
 	- It will log only classes and methods that are annotated using `@UnloggedClass` and `@UnloggedMethod`
-	- This mode does not injects probes for unprobed methods so there will have no performance impact.
+	- This mode does not injects probes for non-annotated methods so they will not have any performance impact.
 	- The counter of Unlogged annotation will be ignored, since any non-annotated method will not be logged.
 
 3. Log Annotated With Children
 	- This can be configured from main annotation like `@Unlogged(unloggedMode = UnloggedMode.LogAnnotatedWithChildren)`
 	- It will log classes and methods that are annotated using `@UnloggedClass` and `@UnloggedMethod` and the calls that they make to other methods.
-	- Non-annotated methods when called from annotated method will be recorded too.
 	- The counter of `@Unlogged` annotation will be used for downstream calls. An non-annotated downstream method will be logged only if the parent method is annotated, and both parent and child methods are to be logged from there frequency counter. 
 
 Consider the following scenario:
@@ -24,6 +23,7 @@ Consider the following scenario:
 - Method-A is annotated with `@UnloggedMethod`
 - Method-B and C are non-annotated
 - Method-A and B call method-C as a downstream call
+- Process wide counter is set to 1.
 
 ![](./assets/images/logging_mode.png)
 
@@ -31,6 +31,6 @@ Consider the following scenario:
 
 | UnloggedMode 				| Method-A is called | Method-B is called |
 |---------------------------|--------------------|--------------------|
-| LogAll   					| A, C are logged 	 | B, C are logged	  |
+| LogAll   					| A and C are logged | B and C are logged |
 | LogAnnotatedOnly			| A is logged		 | nothing is logged  |
-| LogAnnotatedWithChildren	| A,C are logged 	 | nothing is logged  |
+| LogAnnotatedWithChildren	| A and C are logged | nothing is logged  |

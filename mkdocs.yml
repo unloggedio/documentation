@@ -12,6 +12,7 @@ nav:
   - Runtime Mocking: mocking.md
   - Generating JUnit Tests: generate_automated_junit.md
   - Selective Logging: selective_logging.md
+  - Logging modes: logging_mode.md
   - Remote Replay: server.md
   - What do we track?: analytics.md
 theme:

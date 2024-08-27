@@ -18,6 +18,11 @@ Probing of code can happen in multiple modes. This configuration allows the user
 	- It will log classes and methods that are annotated using `@UnloggedClass` and `@UnloggedMethod` and the calls that they make to other methods.
 	- The counter of `@Unlogged` annotation will be used for downstream calls. A non-annotated downstream method will be logged only if the parent method is annotated, and both parent and child methods are to be logged from there frequency counter. 
 
+4. Log Nothing
+	- This can be configured from main annotation like `@Unlogged(unloggedMode = UnloggedMode.LogNothing)`
+	- No methods are logged, and thus no test candidates will be generated.
+	- Features like Direct Invoke will still work.
+
 Consider the following scenario:
 
 - Method-A is annotated with `@UnloggedMethod`
@@ -34,3 +39,4 @@ Consider the following scenario:
 | LogAll   					| A and C are logged | B and C are logged |
 | LogAnnotatedOnly			| A is logged		 | nothing is logged  |
 | LogAnnotatedWithChildren	| A and C are logged | nothing is logged  |
+| LogNothing				| nothing is logged  | nothing is logged  |

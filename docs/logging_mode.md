@@ -35,9 +35,9 @@ This configuration allows the user to probe only some classes and methods that a
 
 ## Scenario:
 
-- Method-A is annotated with `@UnloggedMethod`
-- Method-B and C are non-annotated
-- Method-A and B call method-C as a downstream call
+- Method-A is annotated with `@UnloggedMethod`.
+- Method-B and C are non-annotated.
+- Method-A and B call method-C as a downstream call.
 - Process wide counter is set to 1.
 
 ![](./assets/images/logging_mode.png)
